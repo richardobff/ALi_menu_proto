@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ST. ALi Rail Test</title>
 <style>
 /* Layout: a fixed stage with a single centred rail. Cards scale with distance from a focal line; native scroll drives it. */
@@ -52,6 +57,9 @@ body{margin:0;background:var(--coffee);color:var(--ink);font-family:var(--sans);
 
 @media (prefers-reduced-motion: reduce){body,#tabs button{transition:none}}
 </style>
+</head>
+<body>
+
 
 <div id="bar">
   <div id="strip">
@@ -141,3 +149,6 @@ document.querySelectorAll('#tabs button').forEach(b=>b.addEventListener('click',
 addEventListener('resize', measure);
 measure(); requestAnimationFrame(frame);
 </script>
+
+</body>
+</html>
