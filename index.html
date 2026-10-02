@@ -64,7 +64,6 @@ body{margin:0;background:var(--coffee);color:var(--ink);font-family:var(--sans);
 <div id="bar">
   <div id="strip">
     <span>VISUAL MENU - OCT 2026</span>
-    <span class="variant" role="group" aria-label="Card variant">CARD <button type="button" id="vA"><b aria-pressed="true">A</b></button> <button type="button" id="vB"><b aria-pressed="false">B</b></button> <button type="button" id="vC"><b aria-pressed="false">C</b></button></span>
     <span>LOYALTY MEMBERS</span>
   </div>
   <nav id="tabs" aria-label="Menu sections">
@@ -140,11 +139,6 @@ function frame(){
 }
 document.querySelectorAll('#tabs button').forEach(b=>b.addEventListener('click',()=>{
   scrollTo({top:firstOf[b.dataset.sec]*STEP, behavior: reduce?'auto':'smooth'});
-}));
-['A','B','C'].forEach(v=>document.getElementById('v'+v).addEventListener('click',()=>{
-  stage.className='v'+v;
-  ['A','B','C'].forEach(w=>document.querySelector('#v'+w+' b').setAttribute('aria-pressed', String(w===v)));
-  measure();
 }));
 addEventListener('resize', measure);
 measure(); requestAnimationFrame(frame);
